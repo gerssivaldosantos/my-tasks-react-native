@@ -1,0 +1,12 @@
+{
+  "name": "toDoAppReactNative",
+  "displayName": "toDoAppReactNative",
+  "expo": {
+    "name": "toDoAppReactNative",
+    "slug": "toDoAppReactNative",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
