@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
         borderRadius:50,
         backgroundColor:'white',
         position: 'absolute',
-        width:80,
-        height:80,
+        width:70,
+        height:70,
         right:25,
         bottom:25,
         elevation:2,
@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     },
    
     task:{
+          alignItems:'center',
           flex:1,
           flexDirection:'row',
           backgroundColor:'white',
@@ -55,6 +56,12 @@ const styles = StyleSheet.create({
             height:-5,
           }
           
+    },
+    taskText:{
+      paddingLeft:10,
+      color:"#121212",
+      fontSize:20,
+      paddingRight:20
     }
   });
 
