@@ -3,47 +3,57 @@ import {StyleSheet} from 'react-native'
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#F59968',
+      backgroundColor: '#222222',
       
     },
     title:{
         color:'white',
         fontSize:40,
         alignSelf:'center',
-        top:40,
+        marginTop:20,
         elevation:2,
         shadowColor:'#000',
-        shadowOpacity: 0.2,
-        shadowOffset:{
-          width:1,
-          height:3,
-        }
+        
     },
     buttonAdd:{
+      textAlign: 'center',
+        alignContent:'center',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:50,
+        backgroundColor:'white',
         position: 'absolute',
         width:80,
         height:80,
         right:25,
         bottom:25,
-        alignItems:'center',
-        justifyContent:'flex-end',
         elevation:2,
         zIndex:9, //sobrepor demais itens
-        shadowColor:'#000',
-        shadowOpacity: 0.2,
-        shadowOffset:{
-          width:1,
-          height:3,
-        }
+       
        
     },
-    taskListItem:{
-          fontSize:40,
-          
+    flatList:{
+      top:50
     },
-    taskList:{
+   
+    task:{
+          flex:1,
+          flexDirection:'row',
           backgroundColor:'white',
-          top:50
+          fontSize:40,
+          marginTop:15,
+          borderRadius:12,
+          marginHorizontal:15,
+          color:'#121212',
+          paddingLeft:10,
+          paddingRight:20,
+          elevation: 1.5,
+          shadowColor:'gray',
+          shadowOpacity:0.4,
+          shadowOffset:{
+            width:-4,
+            height:-5,
+          }
           
     }
   });

@@ -21,22 +21,23 @@ export default function App() {
     {key:3, task: 'Comprar pão'},
     {key:4, task: 'Comprar pão'}
   ]);
+  const [backgroud,setBackgroud] = useState('black')
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="#F59968" barStyle="light-content" />
       <View>
-        <Text style={styles.title}>Minhas Tarefas</Text>
+        <Text style={styles.title}>My Tasks</Text>
         <FlatList 
-        
+        style={styles.flatList}
         showsHorizontalScrollIndicator={false}
         data={task}
         keyExtractor={(item) => String(item.key)}
-        renderItem={({item})=> <TaskList data={item}/> } //desativate the scroll horizontal
+        renderItem={({item})=> <TaskList data={item}New Text/> } //desativate the scroll horizontal
         />
       </View>
 
       <TouchableOpacity style={styles.buttonAdd}>
-        <Ionicons name="add-circle-sharp" color={"white"} size={80} />
+        <Ionicons style={styles.icon} name="add" color={"#121212"} size={50} />
       </TouchableOpacity>
     </SafeAreaView>
   );
