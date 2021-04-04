@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-
+const primaryColor = "#ff8700"
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -12,6 +12,10 @@ const styles = StyleSheet.create({
     marginTop: 20,
     elevation: 2,
     shadowColor: "#000",
+    backgroundColor: primaryColor,
+    padding: 10,
+    borderTopLeftRadius: 25,
+    borderBottomRightRadius: 25,
   },
   buttonAdd: {
     textAlign: "center",
@@ -19,17 +23,28 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 50,
-    backgroundColor: "white",
+    backgroundColor: primaryColor,
     position: "absolute",
     width: 70,
     height: 70,
     right: 25,
     bottom: 25,
-    elevation: 2,
     zIndex: 9, //sobrepor demais itens
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.9,
+    shadowRadius: 3.84,
+
+    elevation: 5,
+  },
+  buttonAddIcon: {
+    color: "white",
   },
   flatList: {
-    top: 50,
+    top: 5,
   },
 
   task: {
@@ -63,7 +78,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
-    left: 10,
+    left: 7,
     width: 60,
     height: 60,
     borderRadius: 50,
@@ -88,11 +103,59 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: "column",
   },
-  modalTitle:{
-    fontSize:20,
-    color:'white'
-  }
+  modalTitle: {
+    backgroundColor: primaryColor,
+    color: "white",
+    position: "absolute",
+    alignSelf: "center",
+    justifyContent: "flex-start",
+    top: 48,
+    fontSize: 23,
+    padding: 18,
+    borderBottomLeftRadius: 30,
+    borderTopRightRadius: 30,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 7,
+    },
+    shadowOpacity: 0.41,
+    shadowRadius: 9.11,
+
+    elevation: 14,
+  },
+  modalInput: {
+    position: "absolute",
+    backgroundColor: "white",
+    alignSelf: "flex-start",
+    justifyContent: "flex-start",
+    top: 180,
+    left: -20,
+    width: "75%",
+    height: 120,
+    borderTopRightRadius: 30,
+    borderBottomRightRadius: 30,
+    textAlignVertical: "top",
+    paddingTop: 20,
+    paddingLeft: 30,
+    paddingRight: 2,
+    fontSize: 20,
+  },
+  submitButton: {
+    position: "absolute",
+    alignSelf: "flex-end",
+    top: 210,
+    right: 40,
+    backgroundColor: "white",
+    padding: 10,
+    borderRadius: 20,
+  },
+  submitButtonIcon: {
+    color: "#121212",
+    left: 1,
+  },
 });
 
-export default styles;
+export default styles

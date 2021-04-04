@@ -11,7 +11,7 @@ export default function TaskList({data}) {
     animation="flipInY"
     useNativeDriver>
       <TouchableOpacity>
-        <Ionicons name="md-checkmark-circle" size={30} color="#222222" />
+        <Ionicons style={{color:'#ff8700'}} name="md-checkmark-circle" size={30} color="#222222" />
       </TouchableOpacity>
      <View>
       <Text style={styles.taskText}>{data.task}</Text>
