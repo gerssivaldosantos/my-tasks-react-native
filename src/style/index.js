@@ -17,6 +17,31 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 25,
     borderBottomRightRadius: 25,
   },
+  TextBody:{
+    
+    color: "#565656",
+    fontSize: 55,
+    textAlign: 'center',
+    textAlignVertical:'bottom',
+    height:'40%'
+  },
+  TextBody2:{
+    
+    color: "#565656",
+    fontSize: 20,
+    textAlign:'center',
+    textAlignVertical:'top',
+    height:'60%'
+  },
+  buttonAbout:{
+    position:'absolute',
+    alignSelf:'center',
+    justifyContent:'center',
+    
+  },
+  buttonAboutIcon:{
+    color: "#E5994E"
+  },
   buttonAdd: {
     textAlign: "center",
     alignContent: "center",
@@ -45,6 +70,8 @@ const styles = StyleSheet.create({
   },
   flatList: {
     top: 5,
+    zIndex: 9,
+    flex:1
   },
 
   task: {

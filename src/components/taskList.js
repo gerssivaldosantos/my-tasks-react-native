@@ -4,13 +4,14 @@ import styles from "../style/index";
 import { Ionicons } from "@expo/vector-icons";
 import * as Animatable from 'react-native-animatable';
 
-export default function TaskList({data}) {
+export default function TaskList({data, taskDelete}) {
   return (
     <Animatable.View 
     style={styles.task}
     animation="flipInY"
     useNativeDriver>
-      <TouchableOpacity>
+      <TouchableOpacity
+      onPress={()=> taskDelete(data)}>
         <Ionicons style={{color:'#ff8700'}} name="md-checkmark-circle" size={30} color="#222222" />
       </TouchableOpacity>
      <View>
