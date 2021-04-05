@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import {
   TouchableOpacity,
   Text,
@@ -9,12 +9,13 @@ import {
   Modal,
   TextInput,
   Alert,
+  
 } from "react-native";
 import styles from "../style/index";
 import { Ionicons } from "@expo/vector-icons";
-import States from "../components/state";
 import TaskList from "../components/taskList";
 import * as Animatable from "react-native-animatable";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const ButtonAnimated = Animatable.createAnimatableComponent(TouchableOpacity);
 const AnimatableTextInput = Animatable.createAnimatableComponent(TextInput);
 
@@ -29,10 +30,6 @@ export default function App() {
       key: input,
       task: input,
     };
-    
-    
-    
-
     /* passing all the tasks that already exist + the new task that 
    is in the input field (what this "..." operator is for, he goes
     through all the intens) */
@@ -41,7 +38,26 @@ export default function App() {
     setInput("");
 
   }
-    
+  //searching tasks
+    useEffect(()=> {
+      async function loadTasks(){
+        const taskStorage = await AsyncStorage.getItem('@task');
+        if(taskStorage){
+          setTask(JSON.parse(taskStorage));
+        }
+      }
+      loadTasks()
+    },[]);
+//save tasks
+    useEffect(()=> {
+      async function saveTasks(){
+        await AsyncStorage.setItem('@task',JSON.stringify(task));
+
+      }
+    saveTasks()
+    },[task]);
+ 
+
     const taskDelete = useCallback((data)=>{
       const find = task.filter(result => result.key !== data.key)
       setTask(find)
