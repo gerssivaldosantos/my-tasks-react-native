@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { useState } from \"react\";","map":{"version":3,"sources":["/home/andrade/Documents/ReactNative/ToDoApp/src/components/state.js"],"names":["useState"],"mappings":"AAAA,SAASA,QAAT,QAAyB,OAAzB","sourcesContent":["import { useState } from \"react\";\n\n"]},"metadata":{},"sourceType":"module"}
